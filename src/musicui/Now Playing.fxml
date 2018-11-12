@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="398.0" prefWidth="554.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicui.RecentPlaysController">
+   <children>
+      <JFXTextArea layoutX="60.0" layoutY="106.0" opacity="0.63" promptText="My music" text="Now Playing">
+         <font>
+            <Font size="65.0" />
+         </font>
+      </JFXTextArea>
+   </children>
+</AnchorPane>

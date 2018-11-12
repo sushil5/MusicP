@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import com.jfoenix.controls.JFXSlider?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="musicui.Home1Controller">
+   <children>
+      <AnchorPane layoutY="400.0" prefHeight="100.0" prefWidth="802.0" style="-fx-background-color: #11234d;">
+         <children>
+            <MaterialDesignIconView fx:id="playPause" boundsType="VISUAL" fill="#f8f6f6" glyphName="PLAY_CIRCLE_OUTLINE" layoutX="494.0" layoutY="53.0" onMouseClicked="#playPauseSong" size="40.0" text="" AnchorPane.leftAnchor="494.0" />
+            <MaterialDesignIconView fx:id="playPrevious" fill="#f8f3f3" glyphName="SKIP_PREVIOUS" layoutX="430.0" layoutY="50.0" onMouseClicked="#playPreviousSong" size="30.0" text="" AnchorPane.leftAnchor="430.0" />
+            <MaterialDesignIconView fx:id="playNext" fill="#f8f3f3" glyphName="SKIP_NEXT" layoutX="568.0" layoutY="50.0" onMouseClicked="#playNextSong" size="30.0" />
+            <JFXSlider fx:id="slider" layoutX="375.0" layoutY="72.0" prefHeight="14.0" prefWidth="275.0">
+               <effect>
+                  <ColorAdjust brightness="1.0" contrast="1.0" hue="1.0" saturation="1.0" />
+               </effect>
+            </JFXSlider>
+            <Label fx:id="lblSongName" layoutX="54.0" layoutY="28.0" prefHeight="45.0" prefWidth="230.0" textFill="#fffbfb">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <MaterialDesignIconView fill="#f5f2f2" glyphName="BOOKMARK_MUSIC" layoutX="14.0" layoutY="61.0" size="30.0" wrappingWidth="29.999999899417162" />
+            <Label fx:id="lblcurrentTime" layoutX="330.0" layoutY="70.0" textFill="#fcf9f9">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbltotalDuration" layoutX="665.0" layoutY="70.0" textFill="#fffefe">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="54.0" layoutY="-1.0" prefHeight="401.0" prefWidth="177.0" style="-fx-background-color: #11234d;">
+         <children>
+            <JFXButton id="btn" fx:id="myMusic" contentDisplay="RIGHT" onAction="#getMusic" prefHeight="47.0" prefWidth="174.0" text="My music" textFill="#eee8e8">
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="2.0" />
+               </VBox.margin>
+            </JFXButton>
+            <JFXButton fx:id="recentPlays" contentDisplay="CENTER" onAction="#getRecent" prefHeight="47.0" prefWidth="174.0" text="Recent Plays" textFill="#eee8e8">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets right="3.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="playlist" contentDisplay="CENTER" onAction="#getPlaylist" prefHeight="47.0" prefWidth="174.0" text="Playlist" textFill="#eaeaeb">
+               <padding>
+                  <Insets right="35.0" />
+               </padding>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton fx:id="nowPlaying" contentDisplay="CENTER" onAction="#getPlaying" prefHeight="47.0" prefWidth="174.0" text="Now Playing" textFill="#eee8e8">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </JFXButton>
+            <JFXButton fx:id="signin" contentDisplay="CENTER" onAction="#getSignin" prefHeight="47.0" prefWidth="174.0" text="Signin" textFill="#eee8e8">
+               <font>
+                  <Font size="13.0" />
+               </font>
+               <padding>
+                  <Insets right="40.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="174.0" />
+               </VBox.margin>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane layoutY="-1.0" prefHeight="401.0" prefWidth="57.0">
+         <children>
+            <FontAwesomeIconView fill="#11234d" glyphName="USER" layoutX="22.0" layoutY="385.0" size="20.0" />
+            <FontAwesomeIconView fill="#11234d" glyphName="HEART" layoutX="20.0" layoutY="121.0" size="20.0" />
+            <FontAwesomeIconView fill="#11234d" glyphName="DOT_CIRCLE_ALT" layoutX="21.0" layoutY="167.0" size="20.0" />
+            <FontAwesomeIconView fill="#11234d" glyphName="CLOCK_ALT" layoutX="21.0" layoutY="78.0" size="20.0" text="" />
+            <FontAwesomeIconView fill="#11234d" glyphName="MUSIC" layoutX="20.0" layoutY="36.0" size="20.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="main" layoutX="229.0" layoutY="-1.0" prefHeight="401.0" prefWidth="573.0">
+         <children>
+            <Pane fx:id="playlistPane" prefHeight="401.0" prefWidth="573.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTextArea layoutX="31.0" layoutY="131.0" text="Playlist">
+                     <font>
+                        <Font size="65.0" />
+                     </font>
+                  </JFXTextArea>
+               </children>
+            </Pane>
+            <Pane fx:id="recentPlaysPane" prefHeight="401.0" prefWidth="573.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTextArea layoutX="38.0" layoutY="111.0" text="Recent Plays">
+                     <font>
+                        <Font size="67.0" />
+                     </font>
+                  </JFXTextArea>
+               </children>
+            </Pane>
+            <Pane fx:id="myMusicPane" prefHeight="401.0" prefWidth="573.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXListView fx:id="listView" layoutY="1.0" onMouseClicked="#getSong" prefHeight="400.0" prefWidth="573.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="signinPane" prefHeight="401.0" prefWidth="573.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="signinImage" fitHeight="400.0" fitWidth="573.0" layoutY="1.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@1.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="nowPlayingPane" prefHeight="401.0" prefWidth="573.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="backgroundImage" fitHeight="401.0" fitWidth="575.0" layoutX="-1.0" layoutY="1.0" opacity="0.32" pickOnBounds="true">
+                     <image>
+                        <Image url="@songImage.jpeg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="songImage" fitHeight="204.0" fitWidth="253.0" layoutX="157.0" layoutY="63.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@songImage.jpeg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

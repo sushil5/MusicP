@@ -1,0 +1,30 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Oct 12, 2018, 4:38:18 PM
+    Author     : SUSHIL
+*/
+.button{
+    -fx-text-fill:  white;
+
+}
+.button:hover{
+    -fx-background-color: white;
+    -fx-text-fill:  #11234d;
+    -fx-border-color: #11234d;
+}
+.jfx-list-cell{
+    -fx-padding: 14px;
+    
+
+}
+.jfx-list-cell .jfx-rippler{
+
+    -fx-rippler-fill:blue;
+}
+.jfx-list-cell:hover{
+    -fx-background-color:#b8aeae;
+}
