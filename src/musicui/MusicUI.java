@@ -6,6 +6,9 @@
 package musicui;
 
 
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -28,8 +31,13 @@ public class MusicUI extends Application {
 
         stage.show();
         stage.setOnCloseRequest(e -> {
-            Home1Controller.addLastPlayed();
-                        System.exit(0);
+            try {
+                Home1Controller.addLastPlayed();
+                Home1Controller.con.close();
+                System.exit(0);
+            } catch (SQLException ex) {
+                Logger.getLogger(MusicUI.class.getName()).log(Level.SEVERE, null, ex);
+            }
 
         });
     }

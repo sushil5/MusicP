@@ -25,8 +25,7 @@ public class SongInfo {
     String duration;
     Image albumart;
     Thread t;
-    Home1Controller hc=new Home1Controller();
-
+    Home1Controller hc = new Home1Controller();
 
     SongInfo() {
 
@@ -64,23 +63,19 @@ public class SongInfo {
                 public void onChanged(MapChangeListener.Change<? extends String, ? extends Object> ch) {
                     if (ch.wasAdded()) {
                         if (ch.getKey().equals("album")) {
-                            album = ch.getValueAdded().toString();
                         }
                         if (ch.getKey().equals("artist")) {
-                            artist = ch.getValueAdded().toString();
+
 
                         }
                         if (ch.getKey().equals("title")) {
-                          hc.title = ch.getValueAdded().toString();
-                            
+                            hc.title = ch.getValueAdded().toString();
 
                         }
                         if (ch.getValueAdded() instanceof Image) {
-                            Image img = (Image) ch.getValueAdded();
-                            hc.setSongImage(img);
+                           
                         }
                         if (ch.getKey().equals("duration")) {
-                            duration = ch.getValueAdded().toString();
                         }
 
                     }

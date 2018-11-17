@@ -7,15 +7,15 @@ and open the template in the editor.
     Created on : Oct 12, 2018, 4:38:18 PM
     Author     : SUSHIL
 */
-.button{
+/*.button{
     -fx-text-fill:  white;
 
-}
-.button:hover{
+}*/
+/*.button:hover{
     -fx-background-color: white;
     -fx-text-fill:  #11234d;
     -fx-border-color: #11234d;
-}
+}*/
 .jfx-list-cell{
     -fx-padding: 14px;
     
